@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../tyylit/laskintyylit.css">
+		<title>Laskin</title>
+	</head>
+
+	<body onload="laskin(4,4);">
+
+		<div class="topnav">            
+            <a href="../index.html">Etusivu</a>
+            <a href="pakat.html">Pakat</a>
+            <a class="active" href="Laskin.html">Laskin</a>
+        </div>
+
+		<h1>Laskin</h1>
+		<p>Tässä on JavaScriptillä toteutettu simppeli laskin. Tämä laskuri 
+			ei liity aiheeseen, sen ainoa tarkoitus on todentaa, että 
+			hallitsen kurssilla käydyt asiat. Laskuri ottaa käyttäjän 
+			kaksi antamaa lukua ja suorittaa 4 eri laskutoimitusta niillä. 
+			Suoritettavat laskutoimitukset ovat lukujen kerto, jako, summa 
+			ja erotus.</p>
+		<p>Anna luvut väliltä 1-1000:</p>
+
+		<form>
+			<label for="luku1">Ensimmäinen luku</label>
+			<input type="number" id="luku1" name="luku1"
+				min="1" max="1000" value="4">    
+            <label for="luku2">Toinen luku</label>
+            <input type="number" id="luku2" name="luku2"
+                min="1" max="1000" value="4">    
+            <input
+                onclick="laskin(document.getElementById('luku1').value, document.getElementById('luku2').value);"
+                type="button" id="nappi" name="nappi" value="Laske">    
+		</form>
+		<div id="laskin"></div>
+		
+		<script src="../scriptit/laskin.js"></script>
+	</body>
+</html>
